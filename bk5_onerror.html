@@ -1,0 +1,37 @@
+<html>
+ <head>
+   <title>Hello world1</title>
+ </head>
+ <body>
+   <script type="text/javascript">
+	
+	//using a with statement
+	s1 = "The quick brown fox jumps over the lazy dog"
+	with(s1)
+	{
+	 document.write("The string is: "+length+" characters<br>")
+	 document.write("In upper case it is: " + toUpperCase())
+	}
+
+	document.write("<br>")	
+
+	//a script employing the onerror event
+	onerror = errorHandler //tells error event to use new errorHandler funct from now onward 
+	document.write("Welcome to this website") //deliberate error
+	function errorHandler(message, url, line)
+	{
+	 out = "Sorry an error was encountered.\n\n";
+	 out += "Error: " + message + "\n";
+	 out += "URL: " + url + "\n";
+	 out += "Line: " + line + "\n\n";
+	 out += "Click OK to continue.\n\n";
+	 alert(out);
+	 return true; 
+	}
+ 
+   </script>
+   <noscript>
+     Your browser does not support or has disabled Javascript
+   </noscript>
+ </body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+ <head>
+   <title>Hello world1</title>
+ </head>
+ <body>
+   <script type="text/javascript">
+	
+
+	//while loop
+	counter = 0
+
+	while (counter < 5)
+	{
+	 document.write("counter: " + counter + "<br>")
+	 ++counter
+	}
+ 
+	document.write("<br>")
+
+	//do...while
+	cnt = 1
+	do
+	{
+	 document.write(cnt + " times 7 is " + cnt*7 + "<br>")
+	}while(++cnt <= 7)
+
+	document.write("<br>")
+
+	//for loop
+	for (cntr = 1; cntr <= 7 ; cntr++)
+	{
+	 document.write(cntr + " times 7 is " + cntr*7 + "<br>")
+	}
+	//allowed
+	//for(i=1, j=1; i<10; i++)
+	//for(i=1; i<10; i++, --j)
+	//for(i=1, j=11; i<10; i++, --j)
+
+	document.write("<br>")
+
+	//using break cmd
+
+	haystack =new Array()
+	haystack[17] = "needle"
+	for (j=0; j<20; ++j)
+	{
+	 if (haystack[j] == "needle")
+	 {
+	  document.write("<br> -found at location " + j )
+	  break
+	 }
+	 else document.write(j +", ")
+	} 
+
+
+	document.write("<br>")
+
+	//using continue cmd
+
+	haystack1 =new Array()
+	haystack1[1] = "needle"
+	haystack1[11] = "needle"
+	haystack1[17] = "needle"
+	for (m=0; m<20; ++m)
+	{
+	 if (haystack1[m] == "needle")
+	 {
+	  document.write("<br> -found at location " + m + "<br>")
+	  continue
+	 }
+	 else document.write(m +", ")
+	} 
+
+
+   </script>
+   <noscript>
+     Your browser does not support or has disabled Javascript
+   </noscript>
+ </body>
+</html>

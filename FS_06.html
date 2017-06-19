@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6. Conditional Logic in JavaScript</title>
+  <script type="text/javascript">
+  
+  var someval = 24;
+  var otherval = 23;
+  /*
+   if(someval > 30) {
+   alert("first case")
+   }
+  else if(someval === 30) {
+  alert("second case")
+  }
+  else if(someval === 24) {
+  alert("third case")
+  }
+  else{
+  alert("fourth case");
+  }
+  
+  if (someval > 20 && otherval > 20){
+  alert("5th case");
+  }
+   
+  if (someval === 20 || otherval === 20){
+  alert("6th case");
+  }
+ 
+ someval = false;
+ 
+ if(someval !== 24) {
+ alert("not equal")
+ }
+ 
+  if (!someval) {  //same as if (someval===false)
+  alert("someval is false")
+  }
+  
+  var myres = "";
+  myres = (someval === 24) ? "equal" : "not equal";
+  alert(myres);
+ 
+  
+  myres = (24/"ven") ? "truthy" : "falsey"; //falsey as NaN
+  myres = undefined ? "truthy" : "falsey"; //falsey
+  myres = typeof undefinedvar ? "truthy" : "falsey"; //true
+   */
+   var rightNow = new Date();
+   var currentHour = rightNow.getHours();
+   switch(true)
+   {
+   case (currentHour > 8 && currentHour <12):
+     document.write("Morning!!");
+	 break;
+   case (currentHour === 12):
+     document.write("Lunch time!!");
+	 break;
+   case (currentHour > 12 && currentHour <18):
+     document.write("fight the urge to siesta!");
+	 break;
+   case (currentHour > 18):
+     document.write("go home!");
+	 break;
+	default:
+		document.write("careful, theyll think youre a hard worker");
+		break;
+   }
+   
+  
+  
+  </script
+  
+</head>
+<body>
+  <h1>Conditional Logic in JavaScript</h1>
+</body>
+</html>

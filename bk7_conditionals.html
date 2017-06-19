@@ -1,0 +1,63 @@
+<html>
+ <head>
+   <title>Hello world1</title>
+ </head>
+ <body>
+   <script type="text/javascript">
+	a = 20; b=10
+	//if statement
+	if (a> 100)
+	{
+	 c = 2
+	 document.write("a is greater than 100")
+	}
+
+	//else statement
+	else if (a < 100)
+	{
+	 document.write("a is less than 100")
+	}
+	else
+	{
+	 document.write("a is equal to 100")
+	}
+
+	document.write("<br>")
+
+	if (b==10) document.write("b equals 10")
+
+	document.write("<br>")
+	
+	//switch
+	page = "Home"
+	switch (page)
+	{
+	 case "Home":
+	   document.write("You selected Home")
+	   break
+	 case "About":
+	   document.write("You selected About")
+	   break
+	 case "News":
+	   document.write("You selected News")
+	   break 
+	 default:
+	   document.write("Unrecognized selection")
+	   break 
+	}
+
+	document.write("<br>")
+
+	//ternary(?) operator
+	document.write(
+	 a <=5 ?
+	 "a is less than or equal to 5" :
+	 "a is greater than 5"
+	)
+
+   </script>
+   <noscript>
+     Your browser does not support or has disabled Javascript
+   </noscript>
+ </body>
+</html>

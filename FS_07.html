@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>7. JavaScript Functions</title>
+  <script type="text/javascript">
+	/*
+	function myNewFunc () {
+		alert("hhowdy!!");
+	}
+	myNewFunc ();
+	
+	
+	function myNewFunc (value) {
+		alert("hhowdy," + value);
+	}
+	myNewFunc ("pardner");
+
+	
+	function add() {  //evry func has a default obj ie arg used for n no of args
+		var tempval = 0; //dont need to mention in the functn
+		for (i = 0; i < arguments.length; i++)
+		{
+			tempval += arguments[i];
+		}
+		return tempval;
+	}
+	var value = add(1,2,3,4);
+	alert(value);
+  	
+	// function literal
+	var addme = function() {
+		return arguments[0] + arguments[1];
+	}
+	var mynewval = addme(1,2);
+	alert(mynewval);
+	
+	//this does not work as we ssinged the func to a var obj so it ignores the other name ven
+	var addme = function ven() {
+		return arguments[0] + arguments[1];
+	}
+	var mynewval = ven(1,2);
+	alert(mynewval);
+	
+	//anonymous funcs
+	var res = (function() {
+		return arguments[0] + arguments[1];
+	}) (1,2);
+	alert(res);
+	*/
+	
+	alert((function() {
+		return arguments[0] + arguments[1];
+	}) (1,3));
+	
+	
+  </script>
+</head>
+<body>
+  <h1>7. JavaScript Functions</h1>
+  <input type="submit" value="click me" onclick="myNewFunc()"; />
+</body>
+</html>

@@ -1,0 +1,110 @@
+<html>
+ <head>
+   <title>Declaring a class</title>
+ </head>
+ <body>
+   <script>
+	
+	/*//Declaring the User classa and its methods
+	function User(forename, username, password)
+	{
+		this.forename = forename
+		this.username = username
+		this.password = password
+		
+		this.showUser = function()
+		{
+			document.write("Forename: " + this.forename + "<br>")
+			document.write("Username: " + this.username + "<br>")
+			document.write("Password: " + this.password + "<br>")
+		}
+	}*/
+	
+	/*//Separately defining a class and method
+	function User(forename, username, password)
+	{
+		this.forename = forename
+		this.username = username
+		this.password = password
+		this.showUser = showUser
+	}
+	
+	function showUser()
+		{
+			document.write("Forename: " + this.forename + "<br>")
+			document.write("Username: " + this.username + "<br>")
+			document.write("Password: " + this.password + "<br>")
+		}*/
+		
+	//Declaring the User class using prototype keyword for a method
+	//prototype keyword saves mem. Every instance(obj) of User class will contain 3 properties(forename,username,paswd) and the method, so for 1000 objs showUser will replicate 1000 times. since method is identical you can specify new objs to refer to a single instance instead of creating multiple copies
+	function User(forename, username, password)
+	{
+		this.forename = forename
+		this.username = username
+		this.password = password
+		
+		User.prototype.showUser = function()
+		{
+			document.write("Forename: " + this.forename + "<br>")
+			document.write("Username: " + this.username + "<br>")
+			document.write("Password: " + this.password + "<br>")
+		}
+	}
+	
+	details = new User("venessa", "ven11", 4321)
+	details.showUser()
+	
+	//changing a functn already defined will cause objs calling them to run the new functn, the old definition of the func will be erased
+	User.prototype.showUser = function()
+	{
+			document.write("name: " + this.forename + 
+					       "Username: " + this.username + 
+						   "Password: " + this.password + "<br>")
+	}
+		
+		details.showUser()
+		
+	//static properties can be stored and retrieved from the class's prototype
+	User.prototype.greeting = "Good morning"
+	document.write(User.prototype.greeting)
+	document.write(details.greeting)
+	
+	//Extending JS objs
+	
+	/*//To replace whitespaces by nonbreaking spacesby adding prototype method to JS's default String obj
+	String.prototype.nbsp = function()
+	{
+		return this.replace(/ /g, "&nbsp;")  
+		//1st / denotes start of reg expression 2nd denotes end and g for global search
+	}
+	document.write("The quick brown fox".nbsp())
+	//****not working********/
+	
+	
+	//triming leading and tailing spaces in a string
+	String.prototype.trim = function()
+	{
+		return this.replace(/^\s+|\s+$/g, '')  
+		//^\s+ is for start of string, \s+$ for end of string, | to separate them
+	}
+	document.write("   please trim me    ".trim() + "<br>")
+	
+	/*
+	creating an object
+	details = new User("venessa", "ven", "123")
+	details = new User()	//empty obj
+	details.forename = "venessa"	//populating the empty obj
+	details.username = "ven"
+	details.password = "123"
+	
+	details.greeting = "hello"	//adding new props to obj
+	
+	*/
+ 
+   </script>
+<noscript>
+  Your browser does not support or has disabled Javascript
+</noscript>
+ </body>
+</html>

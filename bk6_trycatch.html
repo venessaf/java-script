@@ -1,0 +1,31 @@
+<html>
+ <head>
+   <title>Hello world1</title>
+ </head>
+ <body>
+   <script type="text/javascript">
+	
+document.write("//trapping an error with try catch for a selected section of code rather than all scripts in a doc")
+document.write("//more std and flexible than onerror technique")
+document.write("//however, they do not catch syntax errors")
+document.write("//eg ajax technique to make use of XMLHttpRequest obj, nt available i  internet explorer browser bt avail in the rest")
+
+	try
+	{
+	 request = new XMLHTTPRequest()
+	}
+	catch(err)
+	{
+	 //use a different method to create an XML HTTP Request obj
+	}
+	finally  //will always get executed regardless of whether an error occurs
+	{
+	 alert("The 'try' clause was encountered")
+	}
+ 
+   </script>
+   <noscript>
+     Your browser does not support or has disabled Javascript
+   </noscript>
+ </body>
+</html>

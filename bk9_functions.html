@@ -1,0 +1,63 @@
+<html>
+ <head>
+   <title>Hello world1</title>
+ </head>
+ <body>
+   <script type="text/javascript">
+
+	//define a function
+	//2displayItems("dog", "cat", "pony")
+
+	//1document.write(fixNames("the", "DALLAS", "CowBoys"))
+
+	/*2function displayItems(v1, v2, v3)
+	{
+	 document.write(v1 + "<br>")
+	 document.write(v2 + "<br>")
+	 document.write(v3 + "<br>") 
+
+	for (j=0; j<displayItems.arguments.length; ++j)
+	{
+	 document.write(displayItems.arguments[j] + "<br>")
+	}
+
+	}*/
+
+	/*1function fixNames()
+	{
+	 var  s=""   //initialize local var to empty str
+	for (j=0; j<fixNames.arguments.length; ++j)
+	{
+	 s += fixNames.arguments[j].charAt(0).toUpperCase() + fixNames.arguments[j].substr(1).toLowerCase() + " "
+	}
+      //on omiting 2nd arg of substr it assumes you want the rest of the string
+	return s.substr(0, s.length-1)  //substr(starting pt, how many chars part of the substr)
+	}*/
+ 	//displayItems("dog", "cat", "pony")
+	
+	//retuning an array of values
+	words = fixNames("the", "DALLAS", "CowBoys")
+	
+	//for (j=0 ; j< words.length ; ++j)
+	   //document.write(words[j] + "<br>")
+	   
+	   document.write(words[0]  + words[2])
+	   
+	function fixNames()
+	{
+		var s= new Array()
+		
+		for (j=0 ; j < fixNames.arguments.length ; ++j)
+		{
+			s[j] = fixNames.arguments[j].charAt(0).toUpperCase() + fixNames.arguments[j].substr(1).toLowerCase()
+		}
+		
+		return s
+	}
+	
+   </script>
+   <noscript>
+     Your browser does not support or has disabled Javascript
+   </noscript>
+ </body>
+</html>
